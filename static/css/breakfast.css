@@ -1,0 +1,102 @@
+
+:root{
+    --orange: #ff7800;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: hsl(15, 80%, 96%);
+}
+
+
+.breakfast .search{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+    width: 400px; 
+  }
+  
+  /* Styles for the search button */
+  .search button {
+    padding: 8px 13px;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 80%;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: -50px;
+  }
+  
+  .meal-result {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 3rem;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+.meal-item {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.3);
+    border-radius: .5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    
+}
+
+.meal-item img {
+    width: 320px;
+    height: 200px;
+}
+
+.meal-name{
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+.meal-name h3{
+    font-size: 2.3rem;
+    color: var(--black);
+}
+
+.recipe-btn{
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--orange);
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    display: block;
+    width: 175px;
+    margin: 1.5rem auto;
+    border-radius: 2rem;
+}
+
+p{
+ font-size: 2rem;
+ color: var(--black);
+ margin-top: 30px; margin-bottom: 50px;
+}

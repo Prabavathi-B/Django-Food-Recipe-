@@ -1,0 +1,83 @@
+{% extends 'base_template.html' %}
+
+{% block title %}
+Breakfast
+{% endblock title %}
+
+
+{% block body_data %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/recipe_details.css' %}">
+
+<!-- recipe details section start -->
+
+<div class="details">
+    <div class="meal-img">
+        {% if image.image %}
+            <img src="{{ image.image.url }}">
+        {% endif %}
+    </div>
+    <div class="content">
+        <div class="title">
+            <h3>{{image.title }}</h3>
+            <i class="fas fa-heart"></i>
+        </div>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p>Easiest way to make healthy happy meal for you and whole your family.</p>
+        <div class="time">
+            <div class="box">
+                <h1>30</h1>
+                <p>mins</p>
+            </div>
+            <div class="box">
+                <div class="serve">
+                    <h1>3</h1>
+                    <p>serve</p>
+                </div>
+                
+            </div>
+            <div class="box">
+                <h1>6</h1>
+                <p>ingredients</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="recipe-details">
+    <div class="ingredients">
+        <h3>ingredients</h3>
+        <ul>
+            <li>{{ image.ingredients|linebreaks }}</li>
+        </ul>
+    </div>
+    <div class="instruction">
+        <h3>instruction</h3>
+        <ol>
+            <li>{{ image.instructions|linebreaks }}</li>      
+        </ol>
+    </div>
+</div>
+
+<div class="video_section">
+    <h1>watched Video:</h1>
+    
+    {% load embed_video_tags %}
+    {% video image.video target=video %}
+    {% if video %}
+        <div class="embed-responsive">
+            {{ video|safe }}
+        </div>
+    {% endif %}
+</div>
+
+<!-- recipe details section end -->
+
+
+{% endblock body_data %}

@@ -1,0 +1,44 @@
+{% extends 'base_template.html' %}
+
+{% block title %}
+Breakfast
+{% endblock title %}
+
+
+{% block body_data %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/breakfast.css' %}">
+
+<!-- breakfast section start-->
+
+<section class="breakfast">
+
+    <div class="search">
+        <form method="get" action="{% url 'breakfast_recipe' %}">
+            <input type="text" name="search" placeholder="search recipe">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+    <div class="meal-result">
+        {% if image %}
+            {% for images in image %}
+                <div class="meal-item">
+                    <img src="{{ images.image.url }}" >
+                    <div class="meal-name">
+                        <h3>{{ images.title }}</h3>
+                        <a href="{% url 'breakfast_detail' images.id %}" class="recipe-btn">Get recipe</a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No recipes found.</p>
+        {% endif %}
+    </div>
+
+</section>
+
+<!-- breakfast section end-->
+
+
+{% endblock body_data %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
+    {% block custom_css %}{% endblock custom_css %}
+</head>
+<body>
+{% include 'header.html' %}
+{% block body_data %}{% endblock body_data %}
+{% include 'footer.html' %}
+</body>
+</html>

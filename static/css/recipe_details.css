@@ -1,0 +1,237 @@
+:root{
+  --orange: #ff7800;
+  --black: #130f40;
+  --light-color: #666;
+  --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+  --border:.2rem solid rgba(0,0,0,.1);
+  --outline:.1rem solid rgba(0,0,0,.1);
+  --outline-hover:.2rem solid var(--black);
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: hsl(15, 80%, 96%);
+  justify-content: center;
+  align-items: center;
+}
+
+.details{
+  display: flex;
+  margin-top: 150px;
+  margin-left: 50px;
+}
+
+.meal-img img {
+  width: 400px; /* Adjust as needed */
+  height: 400px; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+.content {
+  flex: 1;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  
+}
+
+.title h3 {
+  font-size: 4em;
+  color: var(--black);
+}
+
+.title i{
+  height: 3.5rem;
+  width: 3.5rem;
+  line-height: 3.5rem;
+  border-radius: .5rem;
+  background: #fff;
+  color: var(--black);
+  font-size: 2rem;
+  margin-right: .3rem;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid black;
+  margin-left: 30px;
+}
+
+.title i:hover{
+  background: orangered;
+  color: #fff;
+}
+
+.star {
+  color: orangered;
+  margin-top: 1rem;
+   /* Yellow color for stars */
+}
+
+.star i {
+  font-size: 1.7rem;
+  padding: 1rem .1rem;
+}
+
+.content p{
+  line-height: 1.8;
+  font-size: 1.8rem;
+  color: #666;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+.ingredients {
+  margin-top: 20px;
+}
+
+.ingredients ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredients li {
+  font-size: 1px;
+  margin-bottom: 5px;
+}
+
+/* Additional styling for serve boxes */
+
+.time {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  
+}
+
+.time .box{
+  height: 3rem;
+  line-height: 5rem;
+  width: 25%;
+  color: black;
+  text-align: center;
+}
+
+.box .serve{ 
+  border-right: .1rem solid black;
+  border-left: .1rem solid black;
+  width: 100%;
+  text-align: center;
+  
+
+}
+
+.box h1 {
+  font-size: 5em;
+}
+
+.box p {
+  font-size: 2rem;
+  color: #130f40;
+}
+
+.recipe-details {
+  display: flex;
+  margin-top: 60px;
+  background: #fff;
+  width: 80%;
+  justify-content: center; 
+  align-items: center;
+  margin-left: 30%;
+}
+
+.ingredients{
+  flex-basis: 50%;
+  padding: 40px 60px;
+}
+
+.ingredients h3 {
+  text-align: center;
+  font-size: 3.5em;
+  color: #ff7800;
+}
+
+.ingredients ul{
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  margin-top: 30px;
+  border: 1px solid #666;
+  border-radius: 10px;
+  background-color: #eee;
+ 
+}
+
+.ingredients li{
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-top: 20px;
+ 
+}
+
+
+.instruction{
+  flex-basis: 50%;
+  padding: 40px;
+  background: palegreen;
+  color: #fff;
+}
+
+.instruction h3 {
+  margin-left: 70px;
+  font-size: 3.5em;
+  color: #ff7800;
+}
+
+.instruction ol{
+  color: #130f40;
+  padding: 0;
+  margin-right: 30px;
+  margin-top: 30px;
+  font-size: 1.5rem;
+ 
+}
+
+.instruction li{
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-top: 20px;
+ 
+}
+
+.video_section {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.video_section h1 {
+  font-size: 2.5rem;
+  color: var(--orange); 
+  
+}
+
+
+.embed_responsive{
+  margin-top: 120px;
+  border: 2px solid white;
+  border-radius: 18px; 
+}

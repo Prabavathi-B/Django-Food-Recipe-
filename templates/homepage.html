@@ -1,0 +1,141 @@
+{% extends 'base_template.html' %}
+
+{% block body_data %}
+
+{% load static %}
+
+<!-- home section start -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Choose Your<span> Healthy</span> Preference!!</h3>
+        <p> The easiest way to make your favourite meal.</p>
+    </div>
+
+</section>
+
+<!-- home section end -->
+
+
+
+<!-- recipe section start-->
+
+<section class="recipe" id="recipe">
+
+    <h1 class="heading"> our <span>categories</span></h1>
+
+    <div class="swiper recipe-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img onclick="window.location.href='breakfast_recipe'" src="{% static 'images/breakfast food.avif' %}">
+                <h3>breakfast</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+    
+            <div class="swiper-slide box">
+                <img onclick="window.location.href='lunch_recipe'"src="{% static 'images/lunch food.webp' %}">
+                <h3>lunch</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+    
+            <div class="swiper-slide box">
+                <img onclick="window.location.href='dinner_recipe'" src="{% static 'images/dinner food.jpg' %}">
+                <h3>dinner</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+    
+            <div class="swiper-slide box">
+                <img onclick="window.location.href='sweet_recipe'" src="{% static 'images/sweet1.jpg' %}">
+                <h3>sweet</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+    
+            <div class="swiper-slide box">
+                <img onclick="window.location.href='juice_recipe'" src="{% static 'images/juice.avif' %}">
+                <h3>juice</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+
+</section>
+
+<!-- recipe section end-->
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+</html>
+<script>
+    let navbar = document.querySelector('.navbar');
+
+    document.querySelector('#menu-btn').onclick = ()=>{
+        navbar.classList.toggle('active');
+    }
+
+    window.onscroll =()=>{
+        navbar.classList.toggle('active');
+    }
+
+    var swiper = new Swiper(".recipe-slider", {
+      loop:true,
+      spaceBetween: 20,
+      autoplay:{
+        delay: 7500,
+        disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1020: {
+          slidesPerView: 3,
+        },
+      },
+    });
+</script>
+
+{% endblock body_data %}
+
